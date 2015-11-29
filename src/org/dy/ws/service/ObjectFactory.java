@@ -26,9 +26,11 @@ public class ObjectFactory {
 
     private final static QName _GetAllWorlds_QNAME = new QName("http://service.ws.dy.org/", "getAllWorlds");
     private final static QName _GetWorldsByUserResponse_QNAME = new QName("http://service.ws.dy.org/", "getWorldsByUserResponse");
+    private final static QName _GetAllWorlds2Response_QNAME = new QName("http://service.ws.dy.org/", "getAllWorlds2Response");
     private final static QName _SayHi_QNAME = new QName("http://service.ws.dy.org/", "sayHi");
     private final static QName _SayHiResponse_QNAME = new QName("http://service.ws.dy.org/", "sayHiResponse");
     private final static QName _GetAllWorldsResponse_QNAME = new QName("http://service.ws.dy.org/", "getAllWorldsResponse");
+    private final static QName _GetAllWorlds2_QNAME = new QName("http://service.ws.dy.org/", "getAllWorlds2");
     private final static QName _GetWorldsByUser_QNAME = new QName("http://service.ws.dy.org/", "getWorldsByUser");
 
     /**
@@ -52,6 +54,14 @@ public class ObjectFactory {
      */
     public GetAllWorldsResponse.Return createGetAllWorldsResponseReturn() {
         return new GetAllWorldsResponse.Return();
+    }
+
+    /**
+     * Create an instance of {@link GetAllWorlds2 }
+     * 
+     */
+    public GetAllWorlds2 createGetAllWorlds2() {
+        return new GetAllWorlds2();
     }
 
     /**
@@ -92,6 +102,30 @@ public class ObjectFactory {
      */
     public SayHi createSayHi() {
         return new SayHi();
+    }
+
+    /**
+     * Create an instance of {@link GetAllWorlds2Response }
+     * 
+     */
+    public GetAllWorlds2Response createGetAllWorlds2Response() {
+        return new GetAllWorlds2Response();
+    }
+
+    /**
+     * Create an instance of {@link org.dy.ws.service.Entry }
+     * 
+     */
+    public org.dy.ws.service.Entry createEntry() {
+        return new org.dy.ws.service.Entry();
+    }
+
+    /**
+     * Create an instance of {@link WorldMap }
+     * 
+     */
+    public WorldMap createWorldMap() {
+        return new WorldMap();
     }
 
     /**
@@ -137,6 +171,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllWorlds2Response }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.ws.dy.org/", name = "getAllWorlds2Response")
+    public JAXBElement<GetAllWorlds2Response> createGetAllWorlds2Response(GetAllWorlds2Response value) {
+        return new JAXBElement<GetAllWorlds2Response>(_GetAllWorlds2Response_QNAME, GetAllWorlds2Response.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link SayHi }{@code >}}
      * 
      */
@@ -161,6 +204,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://service.ws.dy.org/", name = "getAllWorldsResponse")
     public JAXBElement<GetAllWorldsResponse> createGetAllWorldsResponse(GetAllWorldsResponse value) {
         return new JAXBElement<GetAllWorldsResponse>(_GetAllWorldsResponse_QNAME, GetAllWorldsResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllWorlds2 }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.ws.dy.org/", name = "getAllWorlds2")
+    public JAXBElement<GetAllWorlds2> createGetAllWorlds2(GetAllWorlds2 value) {
+        return new JAXBElement<GetAllWorlds2>(_GetAllWorlds2_QNAME, GetAllWorlds2 .class, null, value);
     }
 
     /**

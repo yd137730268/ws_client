@@ -14,11 +14,14 @@ import org.dy.ws.service.GetAllWorldsResponse.Return;
 import org.dy.ws.service.HelloWorld;
 import org.dy.ws.service.User;
 import org.dy.ws.service.World;
+import org.dy.ws.service.WorldMap;
 
 public class ClientMain {
 	public static void main(String[] args) {
 		HelloWorldWS factory = new HelloWorldWS();
 		HelloWorld helloWorld = factory.getHelloWorldWSPort();
+		
+		System.out.println("*******************************************");
 		System.out.println(helloWorld.sayHi("Dong"));
 
 		System.out.println("*******************************************");
@@ -44,6 +47,11 @@ public class ClientMain {
 		System.out.println("*******************************************");
 
 		Return re = helloWorld.getAllWorlds();
-		System.out.println(re.toString());
+		System.out.println(re.getEntry());
+		
+		System.out.println("*******************************************");
+
+		WorldMap worldMap = helloWorld.getAllWorlds2();
+		System.out.println(worldMap.getList());
 	}
 }
